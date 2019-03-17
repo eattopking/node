@@ -14,7 +14,7 @@ function send404(response) {
 // 返回200，正确请求的内容
 function send200(response, filePath, fileContents) {
   console.log('mime', mime)
-  // response.writeHead(200, {'Content-Type': mime.lookup(path.basename(filePath))});
+  //response.writeHead(200, {'Content-Type': 'text/plain'});
   response.end(fileContents);
 }
 
@@ -41,7 +41,8 @@ function serveStatic(response, cache, abcPath) {
 }
 
 // 创建静态文件http服务
-var server = http.createServer((request, response) => {
+var server = http.createServer();
+server.on('request', (request, response) => {
   var filePath = false;
   if(request.url == '/') {
     filePath = 'public/index.html';
