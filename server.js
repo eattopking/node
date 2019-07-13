@@ -53,6 +53,7 @@ server.on('request', (request, response) => {
   serveStatic(response, cache, absPath);
 });
 
+// 启动静态文件http服务
 server.listen(5000, () => {
   console.log('sever listen 5000');
 });
