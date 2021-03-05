@@ -4,6 +4,8 @@
  * 2.stream实例都是EventEmitter类的实例， 所以stream实例本身也是一个自定义事件发射器， 可以注册事件，
  * 而且对应事件触发条件都已经约定好了， 不需要我们手动触发， 对于不同模块获得的stream， stream注册事件的触发时机是不一样的
  * 3. 开发者使用stream都是通过使用其他的模块， 而得到stream实例，在使用stream实例的方法， 来实现我们管道化
+ *
+ * 4. 使用stream， 它是可读可写的， 也可以时可读的， 也可以是可写的
  */
 
 const http = require('http');
@@ -23,5 +25,6 @@ let stream = fs.createReadStream(fileName);
 stream.on('data', (a) => {
     console.log(111, a);
 });
+
 
 
