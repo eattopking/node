@@ -1,3 +1,5 @@
+// http 模块就是用来， 起node得http服务和在node中进行http请求得
+
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
