@@ -1,5 +1,4 @@
-// http 模块就是用来， 起node得http服务和在node中进行http请求得
-
+// http 模块就是用来，是应用在应用层的模块， 是创建请求http服务的客户端和启动http服务的服务端的模块
 var http = require('http');
 var fs = require('fs');
 var path = require('path');
